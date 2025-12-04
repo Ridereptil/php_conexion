@@ -1,11 +1,18 @@
 [phases.setup]
-nixPkgs = ["php82", "php82Extensions.mysqlnd", "php82Extensions.pdo", "php82Extensions.mbstring"]
+nixPkgs = [
+    "php82", 
+    "php82Extensions.mysqlnd", 
+    "php82Extensions.pdo",
+    "php82Extensions.mbstring",
+    "php82Extensions.curl",
+    "php82Extensions.openssl"
+]
 
 [phases.build]
-cmds = ["echo 'Building PHP application...'"]
-
-[phases.install]
-cmds = ["echo 'Installing dependencies...'"]
+cmds = [
+    "echo 'Building DragonBite PHP backend...'",
+    "php --version"
+]
 
 [start]
 cmd = "php -S 0.0.0.0:$PORT -t ."
