@@ -10,7 +10,7 @@ nixPkgs = [
 
 [phases.build]
 cmds = [
-    "echo 'Building DragonBite PHP backend...'",
+    "echo '=== Building DragonBite PHP Backend ==='",
     "php --version"
 ]
 

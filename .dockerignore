@@ -1,0 +1,8 @@
+.nixpacks/
+.railway/
+.git/
+node_modules/
+vendor/
+*.log
+.env
+.htaccess
