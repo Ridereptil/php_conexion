@@ -1,19 +1,16 @@
 <?php
-// index.php - Página principal de la API
-require_once "config/db_connect.php";
-
+// index.php - Página principal
 header("Content-Type: application/json");
 
 echo json_encode([
     "api" => "DragonBite Backend",
     "version" => "1.0",
     "status" => "online",
-    "database" => "connected",
+    "database" => "MySQL en Railway",
     "endpoints" => [
-        "POST /login.php" => "Autenticación de usuarios",
-        "POST /register.php" => "Registro de nuevos usuarios",
-        "GET /test.php" => "Prueba de conexión",
-        "GET /usuarios.php" => "Listar usuarios (protegido)"
+        "POST /api/login.php" => "Autenticación",
+        "POST /api/register.php" => "Registro",
+        "GET /test.php" => "Prueba conexión"
     ],
     "timestamp" => date("Y-m-d H:i:s"),
     "environment" => "Railway"

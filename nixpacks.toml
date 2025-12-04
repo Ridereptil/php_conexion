@@ -1,11 +1,11 @@
 [phases.setup]
-nixPkgs = ["php82", "php82Extensions.mysqlnd", "php82Extensions.pdo", "php82Extensions.mbstring", "php82Extensions.curl", "php82Extensions.openssl", "php82Extensions.json"]
-
-[phases.install]
-cmds = ["echo 'PHP dependencies installed'"]
+nixPkgs = ["php82", "php82Extensions.mysqlnd", "php82Extensions.pdo", "php82Extensions.mbstring"]
 
 [phases.build]
-cmds = ["echo 'Building PHP app...'"]
+cmds = ["echo 'Building PHP application...'"]
+
+[phases.install]
+cmds = ["echo 'Installing dependencies...'"]
 
 [start]
 cmd = "php -S 0.0.0.0:$PORT -t ."
